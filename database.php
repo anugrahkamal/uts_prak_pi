@@ -17,5 +17,13 @@ class database{
 		}
 		return $hasil;
 	}
+
+	function tambah_data($first_name, $last_name, $username, $email, $password){
+		mysql_query("INSERT INTO users VALUES('','$first_name','$last_name','$username','$email','$password')");
+	}
+
+	function hapus($id){
+		mysql_query("DELETE FROM users WHERE id='$id'");
+	}
 }
 ?>

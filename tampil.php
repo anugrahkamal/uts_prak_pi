@@ -4,7 +4,7 @@ $db = new database();
 ?>
 <h3>Data User</h3>
  
-<a href="">Input Data</a>
+<a href="input.php">Input Data</a>
 <table border="1">
 	<tr>
 		<th>No</th>
@@ -27,8 +27,8 @@ $db = new database();
 		<td><?php echo $user['email']; ?></td>
 		<td><?php echo $user['password']; ?></td>
 		<td>
-			<a href="edit.php?id=<?php echo $x['id']; ?>&aksi=edit">Edit</a>
-			<a href="proses.php?id=<?php echo $x['id']; ?>&aksi=hapus">Hapus</a>			
+			<a href="edit.php?id=<?php echo $user['id']; ?>&aksi=edit">Edit</a>
+			<a href="proses.php?id=<?php echo $user['id']; ?>&aksi=hapus">Hapus</a>			
 		</td>
 	</tr>
 	<?php 
