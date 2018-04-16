@@ -9,8 +9,8 @@ $aksi = $_GET['aksi'];
  }elseif($aksi == "hapus"){ 	
  	$db->hapus($_GET['id']);
 	header("location:tampil.php");
- }elseif($aksi == "update"){
- 	$db->update($_POST['id'],$_POST['nama'],$_POST['alamat'],$_POST['usia']);
+ }elseif($aksi == "edit"){
+ 	$db->update($_POST['id'],$_POST['first_name'],$_POST['last_name'],$_POST['username'],$_POST['email'],$_POST['password']);
  	header("location:tampil.php");
  }
 ?>

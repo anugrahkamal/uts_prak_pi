@@ -25,5 +25,17 @@ class database{
 	function hapus($id){
 		mysql_query("DELETE FROM users WHERE id='$id'");
 	}
+
+	function edit($id){
+		$data=mysql_query("SELECT * FROM users WHERE id='$id'");
+		while ($edit=mysql_fetch_array($data)) {
+			$hasil[]=$edit;
+		}
+		return $hasil;
+	}
+
+	function update($id, $first_name, $last_name, $username, $email, $password){
+		mysql_query("UPDATE users SET first_name='$first_name', last_name='$last_name', username='$username', email='$email', password='$password' WHERE id='$id'");
+	}
 }
 ?>
