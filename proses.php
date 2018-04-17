@@ -21,5 +21,14 @@ $aksi = $_GET['aksi'];
  }elseif ($aksi == "edit_buku") {
  	$db->update_buku($_POST['id'],$_POST['serial'],$_POST['title'],$_POST['author'],$_POST['synopsis'],$_POST['id_books_categories']);
  	header("location:buku.php");
+ }elseif ($aksi == "tambah_kategori") {
+ 	$db->tambah_data_kategori($_POST['name'],$_POST['description']);
+ 	header("location:kategori.php");
+ }elseif ($aksi == "hapus_kategori") {
+ 	$db->hapus_kategori($_GET['id']);
+	header("location:kategori.php");
+ }elseif ($aksi == "edit_kategori") {
+ 	$db->update_kategori($_POST['id'],$_POST['name'],$_POST['description']);
+ 	header("location:kategori.php");
  }
 ?>
