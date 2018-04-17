@@ -7,8 +7,8 @@
 
 <nav class="nav">
 <ul><li><a href="index.php">Data User</a> | </li>
-	<li><a href="galeri.html">Data Buku</a> | </li>
-	<li><a href="harga.html">Data Kategori</a></li>
+	<li><a href="buku.php">Data Buku</a> | </li>
+	<li><a href="kategori.php">Data Kategori</a></li>
 </ul>
 </nav>
 

@@ -17,36 +17,36 @@ $db = new database();
 </ul>
 </nav>
 <br><br>
-<h1>Data User</h1>
+<h1>Data Buku</h1>
 <style type="text/css">
 td,th{border:1px solid #ccc;padding:10px;}
 table{border-collapse:collapse;}
 </style> 
-<a href="input.php"><input type="submit" value="Tambah Data User"></a>
+<a href="input_buku.php"><input type="submit" value="Tambah Data Buku"></a>
 <table border="1">
 	<tr>
 		<th>No</th>
-		<th>Nama Depan</th>
-		<th>Nama Belakang</th>
-		<th>Username</th>
-		<th>Email</th>
-		<th>Password</th>
+		<th>Seri</th>
+		<th>Judul</th>
+		<th>Penulis</th>
+		<th>Sinopsis</th>
+		<th>ID Kategori</th>
 		<th>Opsi</th>
 	</tr>
 	<?php
 	$no = 1;
-	foreach($db->tampil_data() as $user){
+	foreach($db->tampil_data_buku() as $buku){
 	?>
 	<tr>
 		<td><?php echo $no++; ?></td>
-		<td><?php echo $user['first_name']; ?></td>
-		<td><?php echo $user['last_name']; ?></td>
-		<td><?php echo $user['username']; ?></td>
-		<td><?php echo $user['email']; ?></td>
-		<td><?php echo $user['password']; ?></td>
+		<td><?php echo $buku['serial']; ?></td>
+		<td><?php echo $buku['title']; ?></td>
+		<td><?php echo $buku['author']; ?></td>
+		<td><?php echo $buku['synopsis']; ?></td>
+		<td><?php echo $buku['id_books_categories']; ?></td>
 		<td>
-			<a href="edit.php?id=<?php echo $user['id']; ?>&aksi=edit">Edit</a> | 
-			<a href="proses.php?id=<?php echo $user['id']; ?>&aksi=hapus">Hapus</a>			
+			<a href="edit_buku.php?id=<?php echo $buku['id']; ?>&aksi=edit_buku">Edit</a> |
+			<a href="proses.php?id=<?php echo $buku['id']; ?>&aksi=hapus_buku">Hapus</a>			
 		</td>
 	</tr>
 	<?php 

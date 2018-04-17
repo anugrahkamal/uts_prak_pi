@@ -37,5 +37,33 @@ class database{
 	function update($id, $first_name, $last_name, $username, $email, $password){
 		mysql_query("UPDATE users SET first_name='$first_name', last_name='$last_name', username='$username', email='$email', password='$password' WHERE id='$id'");
 	}
+
+	function tampil_data_buku(){
+		$data=mysql_query("SELECT * FROM books");
+		while ($u=mysql_fetch_array($data)) {
+			$hasil[]=$u;
+		}
+		return $hasil;
+	}
+
+	function tambah_data_buku($serial, $title, $author, $synopsis, $id_books_categories){
+		mysql_query("INSERT INTO books VALUES('','$serial','$title','$author','$synopsis','$id_books_categories')");
+	}
+
+	function hapus_buku($id){
+		mysql_query("DELETE FROM books WHERE id='$id'");
+	}
+
+	function edit_buku($id){
+		$data=mysql_query("SELECT * FROM books WHERE id='$id'");
+		while ($edit=mysql_fetch_array($data)) {
+			$hasil[]=$edit;
+		}
+		return $hasil;
+	}
+
+	function update_buku($id, $serial, $title, $author, $synopsis, $id_books_categories){
+		mysql_query("UPDATE books SET serial='$serial', title='$title', author='$author', synopsis='$synopsis', id_books_categories='$id_books_categories' WHERE id='$id'");
+	}
 }
 ?>
