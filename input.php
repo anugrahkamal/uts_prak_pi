@@ -1,5 +1,20 @@
-<h3>Tambah Data User</h3>
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+<nav class="nav">
+<ul><li><a href="index.php">Data User</a> | </li>
+	<li><a href="galeri.html">Data Buku</a> | </li>
+	<li><a href="harga.html">Data Kategori</a></li>
+</ul>
+</nav>
+
+
+<div class="isimain">
+<h1>Tambah Data User</h1>
 <form action="proses.php?aksi=tambah" method="post">
 <table>
 	<tr>
@@ -27,4 +42,5 @@
 		<td><input type="submit" value="Simpan"></td>
 	</tr>
 </table>
-</form>
+</form></div>
+</body></html>

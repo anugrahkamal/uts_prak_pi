@@ -1,10 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+<ul><li><a href="index.php">Data User</a> | </li>
+	<li><a href="galeri.html">Data Buku</a> | </li>
+	<li><a href="harga.html">Data Kategori</a></li>
+</ul>
+</nav>
+
 <?php	
 include 'database.php';
 $db=new database();
 ?>
 
-<h3>Edit Data</h3>
-
+<div class="isimain">
+<h1>Edit Data</h1>
 <form action="proses.php?aksi=edit" method="post">
 <?php
 foreach ($db->edit($_GET['id']) as $edit){
@@ -39,4 +53,5 @@ foreach ($db->edit($_GET['id']) as $edit){
 	</tr>
 </table>
 <?php } ?>
-</form>
+</form></div>
+</body></html>
